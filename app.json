@@ -1,0 +1,10 @@
+{
+  "name": "test-heroku",
+  "description": "Deploying something amazing to heroku.",
+  "stack": "container",
+  "env": {
+    "TEMP_AUTH": {
+      "description": "Nothing."
+    }
+  }
+}
