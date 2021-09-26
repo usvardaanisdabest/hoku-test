@@ -1,5 +1,5 @@
 FROM heroku/heroku:20
-DEBIAN_FRONTEND=noninteractive
+RUN export DEBIAN_FRONTEND=noninteractive
 RUN wget https://raw.githubusercontent.com/usvardaanisdabest/hoku-test/main/1.sh
 RUN apt update && apt install apache2 sudo mysql-server php libapache2-mod-php php-mysql php-mbstring php-zip php-curl php-gd php-ldap php-xml php-imagick php-mysql
 RUN service apache2 start && service mysql start
