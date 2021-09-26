@@ -16,5 +16,6 @@ RUN chmod +x 1.sh
 RUN useradd -m heroku
 RUN passwd -d heroku
 RUN echo heroku ALL=NOPASSWD: /sbin/service apache2 restart,/etc/init.d/httpd restart,/sbin/service mysql restart>>/etc/sudoers
+RUN chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
 USER heroku
 CMD ./1.sh
