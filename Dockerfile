@@ -1,7 +1,7 @@
 FROM heroku/heroku:20
 ENV DEBIAN_FRONTEND=noninteractive
 RUN wget https://raw.githubusercontent.com/usvardaanisdabest/hoku-test/main/1.sh
-RUN apt update && apt install apache2 sudo mysql-server php libapache2-mod-php php-mysql php-mbstring php-zip php-curl php-gd php-ldap php-xml php-imagick php-mysql
+RUN apt update && apt install apache2 sudo mysql-server php libapache2-mod-php php-mysql php-mbstring php-zip php-curl php-gd php-ldap php-xml php-imagick php-mysql -y
 RUN service apache2 start && service mysql start
 RUN mysql -e "CREATE DATABASE filerun;"
 RUN mysql -e "CREATE USER 'filerun'@'localhost' IDENTIFIED BY 'YOUR-DB-PASSWORD';"
